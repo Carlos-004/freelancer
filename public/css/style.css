@@ -1,0 +1,210 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    --gris: #757575;
+    --grisClaro: #DFE9F3;
+}
+body{
+    font-size: 16px;
+    font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100% );    
+}
+img{
+    width: 100%;
+}
+h1{
+    font-size: 40px;
+}
+h2{
+    font-size: 34px;
+}
+h3{
+    font-size: 24px;
+}
+.contenido{
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 95%;
+}
+a{
+    text-decoration: none;
+}
+.header .header__title{
+    text-align: center;
+    padding: 20px 0;
+}
+.header .header__title span{
+    color: var(--secundario);
+    font-size: 18px;
+}
+.nav-bg{
+    background-color: var(--secundario);
+}
+.navegacion-principal{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--secundario);
+}
+.navegacion-principal a{
+    padding: 10px;
+    font-weight: bold;
+    color: var(--blanco);
+}
+.navegacion-principal a:hover{
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+.hero{
+    background-image: url("../../img/hero.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    
+}
+.contenido-hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0,.7);
+    height: 500px;
+}
+.contenido-hero h2 {
+    color: var(--blanco);
+    text-align: center;
+}
+.ubicacion{
+    display: grid;
+    place-items: center;
+}
+.ubicacion .city{
+    position: absolute;
+    margin-top: 50px;
+    padding-left: 190px;
+    color: var(--blanco);
+}
+.boton{
+    position: absolute;
+    top: 500px;
+    background-color: var(--secundario);
+    padding: 15px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    color: var(--blanco);
+    font-weight: bold;
+}
+.sombra{
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    border-radius: 20px;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: var(--blanco);
+}
+.sombra h2{
+    text-align: center;
+    margin: 20px 0;
+}
+.servicio{
+    display: grid;
+    place-items: center;
+}
+.servicio h3{
+    color: var(--secundario);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.servicio .iconos{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--primario);
+    border-radius: 100%;
+    width: 140px;
+    height: 140px;
+    margin-bottom: 20px;
+}
+.servicio p{
+    text-align: center;
+}
+.formulario{
+    width: min(600px,100%);
+    margin: 0 auto;
+}
+.formulario fieldset{
+    padding: 20px;
+}
+.formulario fieldset legend{
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--blanco);
+    background-color: var(--secundario);
+    padding: 10px;
+    font-weight: bold;
+}
+.campo input{
+    width: 100%;
+    padding: 15px;
+    border: solid 1px var(--grisClaro);
+    border-radius: 10px;
+}
+.campo textarea{
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    border: solid 1px var(--grisClaro);
+    border-radius: 10px;
+}
+.alinear-derecha{
+    display: flex;
+    justify-content: end;
+}
+.alinear-derecha .btn{
+    background-color: var(--secundario);
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
+    color: var(--blanco);
+    font-weight: bold;
+    cursor: pointer;
+}
+.footer p{
+    text-align: center;
+    margin-top: 10px;
+}
+@media (max-width:480px) {
+    .contenido-hero h2{
+        font-size: 30px;
+    }
+    .servicio p{
+        margin-bottom: 20px;
+    }
+    .alinear-derecha .btn{
+        width: 100%;
+    }
+    
+}
+@media (min-width:768px){
+    .servicios{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+    }
+    .contenedor-campos {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+    }
+    .campo-email,
+    .campo-textarea{
+        grid-column: 1/3;
+    }
+}
